@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 
   def edit
     #既存メッセージレコードを編集
-    @messege = Message.find(params[:id])
+    @message = Message.find(params[:id])
   end
 
   def update
