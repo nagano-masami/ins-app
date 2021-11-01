@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def index
     #Messageモデルのレコードの一覧表示
     #@~~のインスタンス変数でControllerからViewへ変数を渡す
-    @messages = Message.all
+    @messages = Message.order(id: :desc).page(params[:page]).per(5)
   end
 
   def show
