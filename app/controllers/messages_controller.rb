@@ -60,5 +60,5 @@ end
 def message_params
   #必要なパラメータを把握して、送信されてきたデータをフィルタリングする
   #contentカラムだけが欲しいデータ
-  params.require(:message).permit(:content)
+  params.require(:message).permit(:content, :title)
 end
