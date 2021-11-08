@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
 
   def new
     #POSTメソッドを送信する新規作成用の入力フォーム置き場
-    @message = Message.new(content:'sample')
+    @message = Message.new#(content:'sample')
   end
 
   def create
