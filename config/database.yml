@@ -24,6 +24,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: ins-app_production
-  username: ins-app
-  password: <%= ENV['INS-APP_DATABASE_PASSWORD'] %>
+  database: message-board_production
+  username: message-board
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
