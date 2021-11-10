@@ -11,4 +11,6 @@ class User < ApplicationRecord
   #ログイン認証用のメソッドauthenticateを提供する
 
   #つまりpassword_digestカラムを用意し、モデルファイルにhas_secure_passwordを記述すれば、ログイン認証のための準備を良しなに用意してくれる
+
+  has_many :microposts
 end
