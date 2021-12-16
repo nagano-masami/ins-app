@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in, only: [:gooded]
   before_action :correct_user, only: [:destroy]
 
   def create
@@ -18,6 +18,12 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
+  end
+
+  def gooded
+    @micropost = Micropost.find(params[:id])
+    @gooded = @micropost.gooded.page(params[:page])
+    counts_micropost(@micropost)
   end
 
   private
