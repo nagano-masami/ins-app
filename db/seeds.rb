@@ -11,5 +11,9 @@
 #Message.create(title: 'test title 3', content: 'test content 3')
 
 (1..100).each do |number|
-  Message.create(title: 'test title ' + number.to_s, content: 'test content ' + number.to_s)
+  User.create(name: 'testname ' + number.to_s, email: 'testemail ' + number.to_s + '@gmail.com', password_digest: '', created_at: '', updated_at: '' )
+end
+
+(1..10).each do |number|
+  Micropost.create(content: 'test content' + number.to_s, user_id: number.to_s, created_at: '', updated_at: '')
 end
